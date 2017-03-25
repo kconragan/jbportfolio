@@ -1,0 +1,19 @@
+---
+layout: home
+---
+
+<div class="home">
+
+  <h1>Chapters</h1>
+
+  <ul class="posts">
+    {% for project in site.projects %}
+      <li>
+        <a href="{{ project.url | prepend: site.baseurl }}">
+          {{ project.name }}
+          <img src="{{ project.preview }}" />
+        </a>
+      </li>
+    {% endfor %}
+  </ul>
+</div>

@@ -1,0 +1,18 @@
+---
+layout: page
+title: Saudade
+permalink: /projects/saudade/
+---
+
+In my own life, I have at times felt a sense of incompleteness, aching for a sense of place in this world, and a melancholy that perhaps it no longer exists. The Portuguese call this saudade, the Germans sehnsucht. Meaningfully, there is no word for this in my native English. And while I feel unanchored and adrift, in my paintings I can be anywhere. Water is never the same, and each time I add pigment to the wax or heat the painting, it becomes a different place. Each work is infinite in possibility and it is only in letting go
+<ul class="posts">
+  {% for project in site.saudade %}
+    <li>
+      <a href="{{ project.url | prepend: site.baseurl }}">
+        {{ project.name }}
+        <img src="{{ project.preview }}" />
+      </a>
+    </li>
+  {% endfor %}
+</ul>
+</div>

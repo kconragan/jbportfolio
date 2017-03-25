@@ -1,0 +1,18 @@
+---
+# You don't need to edit this file, it's empty on purpose.
+# Edit theme's home layout instead if you wanna make some changes
+# See: https://jekyllrb.com/docs/themes/#overriding-theme-defaults
+layout: default
+---
+
+<h1 class="page-title">Series <span class="byline">of work</span></h1>
+<ul class="projects">
+  {% for project in site.projects %}
+    <li>
+      <a href="{{ project.url | prepend: site.baseurl }}">
+        {{ project.name }}
+        <img src="{{ project.preview }}" />
+      </a>
+    </li>
+  {% endfor %}
+</ul>
