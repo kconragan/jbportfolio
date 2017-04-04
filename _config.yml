@@ -30,14 +30,20 @@ collections:
   images:
     output: false
   saudade:
-    permalink: /projects/saudade/:path/
+    permalink: /series/saudade/:path/
     output: true
-  projects:
+  encaustic:
+    permalink: /series/encaustic/:path/
     output: true
+  series-list:
+    output: true
+
+sass:
+    style: compressed
+    sass_dir: _sass
 
 # Build settings
 markdown: kramdown
-theme: minima
 gems:
   - jekyll-feed
 exclude:

@@ -1,6 +1,7 @@
 ---
 weight: 01
-layout: gallery
+layout: default
 name: Saudade
 preview: /images/saudade/preview.jpg
+link: /series/saudade/
 ---

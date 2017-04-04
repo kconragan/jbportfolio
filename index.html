@@ -1,18 +1,29 @@
 ---
-# You don't need to edit this file, it's empty on purpose.
-# Edit theme's home layout instead if you wanna make some changes
-# See: https://jekyllrb.com/docs/themes/#overriding-theme-defaults
-layout: default
+layout: home
+permalink: /
 ---
+<section id="start" class="fullbleed hero">
+</section>
 
-<h1 class="page-title">Series <span class="byline">of work</span></h1>
-<ul class="projects">
-  {% for project in site.projects %}
-    <li>
-      <a href="{{ project.url | prepend: site.baseurl }}">
-        {{ project.name }}
-        <img src="{{ project.preview }}" />
-      </a>
-    </li>
-  {% endfor %}
-</ul>
+<div class="home">
+
+  <h2>Works</h2>
+
+  <ul class="posts">
+    {% assign sorted = (site.series-list | sort: 'weight') %}
+    {% for project in sorted %}
+      <li>
+        <a href="{{ project.link | prepend: site.baseurl }}">
+          {{ project.name }}
+          <img src="{{ project.preview }}" />
+        </a>
+      </li>
+    {% endfor %}
+  </ul>
+</div>
+{% include scripts.html %}
+<script type="text/javascript">
+  $(window).on('resize',function() {
+      $('#start').css('height', ($(window).height() - 64*2));
+  }).trigger('resize');
+</script>

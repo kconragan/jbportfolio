@@ -1,6 +1,7 @@
 ---
 weight: 02
-layout: gallery
+layout: default
 name: Encaustic
 preview: /images/encaustic/preview.jpg
+link: /series/encaustic/
 ---

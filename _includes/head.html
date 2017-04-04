@@ -1,0 +1,40 @@
+{% assign pagetitle = site.title %}
+{% if page.title %}
+  {% assign pagetitle = page.title %}
+{% endif %}
+
+{% assign pagedescription = site.description %}
+{% if page.description %}
+  {% assign pagedescription = page.description %}
+{% endif %}
+{% if page.excerpt %}
+  {% assign pagedescription = page.excerpt %}
+{% endif %}
+
+{% assign pageurl = page.url | replace:'index.html','' | prepend: site.baseurl | prepend: site.url %}
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <title>{% if page.title %}{{ page.title }} | {% endif %}{{ site.name }}</title>
+
+  <meta charset="UTF-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+  <meta name="description" content="" />
+  <meta name="keywords" content="" />
+  <meta name="author" content="" />
+
+  <!-- Removing initial-scale=1.0 disables zooming capabilities -->
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="MobileOptimized" content="320">
+
+  <meta name="viewport" content="initial-scale=1.0" />
+
+  <link rel="canonical" data-proofer-ignore href="{{ pageurl }}">
+
+  <style type="text/css">
+    {% capture include_to_scssify %}{% include main.scss %}{% endcapture %}
+    {{ include_to_scssify | scssify }}
+  </style>
+</head>
+<body>
