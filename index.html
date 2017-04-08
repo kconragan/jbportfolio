@@ -1,0 +1,47 @@
+---
+layout: home
+permalink: /
+---
+<!-- <section id="start" class="fullbleed hero">
+</section> -->
+
+<div class="home">
+
+  <div class="swiper-container" id="start">
+    <ul class="swiper-wrapper">
+      {% assign sorted = (site.series-list | sort: 'weight') %}
+      {% for project in sorted %}
+      <li class="swiper-slide" style="background-image: url({{ project.preview }})">
+        {{ project.name }}
+      </li>
+      {% endfor %}
+    </ul>
+    <!-- Add Pagination -->
+    <div class="swiper-pagination"></div>
+  </div>
+  <!-- <ul class="posts">
+    {% assign sorted = (site.series-list | sort: 'weight') %}
+    {% for project in sorted %}
+      <li>
+        <a href="{{ project.link | prepend: site.baseurl }}">
+          {{ project.name }}
+          <img src="{{ project.preview }}" />
+        </a>
+      </li>
+    {% endfor %}
+  </ul> -->
+</div>
+{% include scripts.html %}
+<script src="https://cdnjs.cloudflare.com/ajax/libs/Swiper/3.4.2/js/swiper.min.js"></script>
+<script type="text/javascript">
+  $(window).on('resize',function() {
+      $('#start').css('height', ($(window).height() - 64*2));
+  }).trigger('resize');
+
+  var swiper = new Swiper('.swiper-container', {
+      pagination: '.swiper-pagination',
+      paginationClickable: true,
+      slidesPerView: 1,
+      spaceBetween: 0,
+  });
+</script>
