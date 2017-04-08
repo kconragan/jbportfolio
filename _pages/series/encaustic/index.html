@@ -1,0 +1,16 @@
+---
+layout: gallery
+title: Encaustic
+permalink: /series/encaustic/
+---
+<ul class="posts masonry">
+  {% for project in site.encaustic %}
+    <li class="item">
+      <a href="{{ project.url | prepend: site.baseurl }}">
+        {{ project.name }}
+        <img src="{{ project.preview }}" />
+      </a>
+    </li>
+  {% endfor %}
+</ul>
+</div>
