@@ -5,7 +5,29 @@ layout: compress
 {% include header.html %}
 {% include base.html %}
 <div id="content">
-  {{ content }}
+  {% assign sorted = (site.series-list | sort: 'weight') %}
+  {% for project in sorted %}
+    {% if project.title == page.title %}
+      <div class="series-masthead">
+        <div class="content" style="background-image: url({{ project.preview | prepend: site.baseurl }}" alt="" style="width:100%;)">
+          <h1 class="series-title">{{ page.title }}</h1>
+        </div>
+      </div>
+      <div class="series-statement">
+        {{ project.content }}
+      </div>
+    {% endif %}
+  {% endfor %}
+  <div class="posts masonry">
+    {% for project in site.[page.slug] %}
+    <div class="item">
+      <a href="{{ project.url | prepend: site.baseurl }}">
+        {{ project.name }}
+        <img src="{{ site.baseurl }}{{ site.image_dir }}{{ project.preview }}" />
+      </a>
+    </div>
+    {% endfor %}
+  </div>
 </div>
 {% include footer.html %}
 {% include scripts.html %}

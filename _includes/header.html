@@ -41,7 +41,7 @@
           {% assign sorted = (site.series-list | sort: 'weight') %}
           {% for project in sorted %}
             <li class="nav-item">
-              <a href="{{ project.link | prepend: site.baseurl }}/">
+              <a href="{{ project.link | prepend: site.baseurl }}">
                 {{ project.name }}
               </a>
             </li>
