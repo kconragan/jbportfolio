@@ -1,0 +1,14 @@
+---
+layout: compress
+---
+{% include head.html %}
+{% include header.html %}
+{% include base.html %}
+<div id="content">
+  {% include pagination.html collection=page.collection %}
+  <img src="{{ page.preview | prepend: site.image_dir | prepend: site.baseurl }}" alt="">
+  {{ content }}
+</div>
+{% include footer.html %}
+{% include scripts.html %}
+{% include foot.html %}

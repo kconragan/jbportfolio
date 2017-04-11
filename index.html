@@ -2,34 +2,23 @@
 layout: home
 permalink: /
 ---
-<!-- <section id="start" class="fullbleed hero">
-</section> -->
-
 <div class="home">
-
-  <div class="swiper-container" id="start">
+  <div class="swiper-container" id="start" data-swiper-autoplay="2000">
     <ul class="swiper-wrapper">
       {% assign sorted = (site.series-list | sort: 'weight') %}
       {% for project in sorted %}
-      <li class="swiper-slide" style="background-image: url({{ project.preview }})">
-        {{ project.name }}
+      <li class="swiper-slide" style="background-image: url({{ site.baseurl }}{{ project.preview }})">
+        <a class="series-link" href="{{ site.baseurl }}{{ project.link }}">
+          <span class="series">SERIES</span>
+          <h2 class="series-title">{{ project.name }}</h2>
+          <i class="icono-arrow2-left"></i>
+        </a>
       </li>
       {% endfor %}
     </ul>
     <!-- Add Pagination -->
     <div class="swiper-pagination"></div>
   </div>
-  <!-- <ul class="posts">
-    {% assign sorted = (site.series-list | sort: 'weight') %}
-    {% for project in sorted %}
-      <li>
-        <a href="{{ project.link | prepend: site.baseurl }}">
-          {{ project.name }}
-          <img src="{{ project.preview }}" />
-        </a>
-      </li>
-    {% endfor %}
-  </ul> -->
 </div>
 {% include scripts.html %}
 <script src="https://cdnjs.cloudflare.com/ajax/libs/Swiper/3.4.2/js/swiper.min.js"></script>
@@ -40,7 +29,10 @@ permalink: /
 
   var swiper = new Swiper('.swiper-container', {
       pagination: '.swiper-pagination',
-      paginationClickable: true,
+      paginationType: 'fraction',
+      autoplay: 5000,
+      autoplayDisableOnInteraction: true,
+      speed: 1800,
       slidesPerView: 1,
       spaceBetween: 0,
   });
