@@ -101,6 +101,7 @@ header[role='banner'] {
 
   .inner {
     position: relative;
+    z-index: 11; /* must be higher than .overlay */
   }
 
   .name {
@@ -191,15 +192,29 @@ header[role='banner'] {
 
   .nav-item {
     font-family: Oswald, sans-serif;
-    font-size: 48px;
+    font-size: 32px;
+
+    @include respond-to(l) {
+      font-size: 64px;
+    }
+  }
+
+  .first {
+    margin-bottom: 24px;
+    @include respond-to(l) {
+      margin-bottom: 48px;
+    };
   }
 
   .bucket {
-    font-size: 16px;
+    font-size: 12px;
     font-family: PT Mono, monospace;
     text-transform: uppercase;
     border-bottom: 1px solid #222;
     color: #222;
+    @include respond-to(l) {
+      font-size: 16px;
+    };
   }
 
   &.open {
@@ -224,12 +239,8 @@ header[role='banner'] {
   }
   nav {
     position: relative;
-    height: 70%;
-    top: 50%;
-    transform: translateY(-50%);
-    font-size: 50px;
-    font-weight: 400;
     text-align: center;
+    margin-top: 64px /* height of header */
   }
   ul {
     list-style: none;
@@ -420,11 +431,9 @@ header[role='banner'] {
   };
 
   @include respond-to(l) {
-    .masonry {
-        -moz-column-count: 3;
-        -webkit-column-count: 3;
-        column-count: 3;
-    }
+    -moz-column-count: 3;
+    -webkit-column-count: 3;
+    column-count: 3;
   };
 }
 
@@ -457,6 +466,77 @@ header[role='banner'] {
 	transform: rotate(-135deg);
 }
 
+.artwork-details {
+  @include respond-to(l) {
+    align-items: start;
+    display: flex;
+    justify-content: space-between;
+  };
+
+  .share-buttons {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    text-align: center;
+
+    @include respond-to(l) {
+      text-align: left;
+    };
+
+    li {
+      display: inline-block;
+      margin-right: 20px;
+      position: relative;
+
+      a {
+        display: block;
+      }
+
+      svg {
+        -webkit-transition: 0.2s linear;
+        -moz-transition: 0.2s linear;
+        -o-transition: 0.2s linear;
+        transition: 0.2s linear;
+        fill: #646464;
+        height: 24px;
+        width: 24px;
+      }
+    }
+  }
+}
+
+.artwork-image {
+  background-repeat: no-repeat;
+  background-size: contain;
+  background-position: top center;
+  text-align: center;
+
+  @include respond-to(l) {
+    width: 50%;
+  };
+
+  img {
+    display: block;
+    margin: 0 auto;
+    max-width: 100%;
+    object-fit: cover;
+    max-height: 600px;
+
+    @include respond-to(m) {
+      max-height: 800px;
+    };
+    @include respond-to(xl) {
+      max-height: 800px;
+    };
+
+  }
+}
+
+.artwork-description {
+  @include respond-to(l) {
+    width: 50%;
+  };
+}
 
 .pagination {
   align-items: center;

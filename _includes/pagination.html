@@ -52,14 +52,14 @@
     prev
     {% endif %}
   </a>
-  <a href="{{ collection.url }}" class="pagination-link">
   {% assign sorted = (site.series-list | sort: 'weight') %}
   {% for project in sorted %}
     {% if project.slug == this_collection %}
+    <a href="{{ project.link | prepend: site.baseurl }}" class="pagination-link">
     {{ project.name }}
     {% endif %}
+    </a>
   {% endfor %}
-  </a>
   <a class="pagination-link next" href="{{ nextPost.url | prepend: site.baseurl }}">
     {% if nextPost.url %}
     next

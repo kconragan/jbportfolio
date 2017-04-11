@@ -6,8 +6,44 @@ layout: compress
 {% include base.html %}
 <div id="content">
   {% include pagination.html collection=page.collection %}
-  <img src="{{ page.preview | prepend: site.image_dir | prepend: site.baseurl }}" alt="">
-  {{ content }}
+  <div class="artwork-details">
+    <div class="artwork-image" style="background-image: {{ page.preview | prepend: site.image_dir | prepend: site.baseurl }}">
+      <img src="{{ page.preview | prepend: site.image_dir | prepend: site.baseurl }}" alt="">
+    </div>
+    <div class="artwork-description">
+      Lorem ipsum dolor si
+      {{ content }}
+      <ul class="share-buttons">
+        <li class="social-twitter">
+          <a title="Tweet" href="http://twitter.com/home?status=Water No. 14 %20-%20Marc Hemeon%20http://marchemeon.com/product/water-no-14" onclick="javascript:window.open(this.href, '', 'menubar=no,toolbar=no,resizable=no,scrollbars=no,height=400,width=600');return false;">
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 30 30">
+              <path d="M25.4 6.5c-.9.5-1.8.9-2.9 1.1-.8-.9-2-1.4-3.3-1.4-2.5 0-4.5 2-4.5 4.4 0 .3 0 .7.1 1-3.8-.2-7.1-2-9.3-4.6-.4.7-.6 1.4-.6 2.3 0 1.5.8 2.9 2 3.7-.7 0-1.4-.2-2-.6v.1c0 2.1 1.6 3.9 3.6 4.4-.4 0-.8.1-1.2.1-.3 0-.6 0-.8-.1.6 1.8 2.2 3 4.2 3.1-1.5 1.2-3.5 1.9-5.6 1.9-.4 0-.7 0-1.1-.1 2 1.3 4.4 2 6.9 2 8.3 0 12.8-6.8 12.8-12.6v-.6c.9-.6 1.6-1.4 2.3-2.3-.8.4-1.7.6-2.6.7.9-.6 1.7-1.4 2-2.5z"></path>
+            </svg>
+          </a>
+        </li>
+        <li class="social-facebook">
+          <a title="Like or Share" href="#">
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 30 30">
+              <path d="M23.9 5H6.1C5.5 5 5 5.5 5 6.1v17.7c0 .7.5 1.2 1.1 1.2h9.5v-7.7H13v-3h2.6V12c0-2.6 1.6-4 3.9-4 1.1 0 2 .1 2.3.1v2.7h-1.6c-1.2 0-1.5.6-1.5 1.5v1.9h3l-.4 3h-2.6V25h5.1c.6 0 1.1-.5 1.1-1.1V6.1c.1-.6-.4-1.1-1-1.1z"></path>
+            </svg>
+          </a>
+          <!-- <div class="facebook_popup_holder">
+            <div class="facebook_popup">
+              <div class="fb-like fb_iframe_widget fb_iframe_widget_fluid" data-href="http://www.marchemeon.com/product/water-no-14" data-layout="button" data-action="like" data-show-faces="false" data-share="true" fb-xfbml-state="rendered" fb-iframe-plugin-query="action=like&amp;app_id=&amp;container_width=0&amp;href=http%3A%2F%2Fwww.marchemeon.com%2Fproduct%2Fwater-no-14&amp;layout=button&amp;locale=en_US&amp;sdk=joey&amp;share=true&amp;show_faces=false"><span style="vertical-align: bottom; width: 96px; height: 20px;"><iframe name="f305e2cccbde4" width="1000px" height="1000px" frameborder="0" allowtransparency="true" allowfullscreen="true" scrolling="no" title="fb:like Facebook Social Plugin" src="https://www.facebook.com/v2.5/plugins/like.php?action=like&amp;app_id=&amp;channel=http%3A%2F%2Fstaticxx.facebook.com%2Fconnect%2Fxd_arbiter%2Fr%2FiKWhU6BAGf7.js%3Fversion%3D42%23cb%3Df3069c18d43e16c%26domain%3Dwww.marchemeon.com%26origin%3Dhttp%253A%252F%252Fwww.marchemeon.com%252Ff2ac857afb1248%26relation%3Dparent.parent&amp;container_width=0&amp;href=http%3A%2F%2Fwww.marchemeon.com%2Fproduct%2Fwater-no-14&amp;layout=button&amp;locale=en_US&amp;sdk=joey&amp;share=true&amp;show_faces=false" class="" style="border: none; visibility: visible; width: 96px; height: 20px;"></iframe></span></div>
+            </div>
+          </div> -->
+        </li>
+        <li class="social-pinterest">
+          <a title="Pin" data-pin-custom="true" data-pin-do="buttonPin" data-pin-log="button_pinit" data-pin-href="https://www.pinterest.com/pin/create/button?guid=ntdEACkq09oB-1&amp;url=http%3A%2F%2Fwww.marchemeon.com%2Fproduct%2Fwater-no-14&amp;media=https%3A%2F%2Fimages.bigcartel.com%2Fproduct_images%2F192063343%2Fwater-14-a.png&amp;description=24%2522%2520x%252030%2522%2520Oil%2520on%2520CanvasStorms%2520will%2520always%2520pass.%2520Love%2520the%2520motion%2520and%2520the%2520rain%2520in%2520this%2520piece.%2520I%2520will%2520be%2520donating%252020%25%2520of%2520this%2520sale%2520to%2520Nalukai%2C%2520a%2520program%2520to%2520help%2520to%2520support%2520design%2520and...">
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 30 30">
+              <path d="M15 25c-1 0-2-.2-3-.4.4-.7 1-1.8 1.2-2.6.1-.5.6-2.4.6-2.4.3.6 1.3 1.1 2.3 1.1 3 0 5.2-2.8 5.2-6.2 0-3.3-2.7-5.8-6.2-5.8-4.3 0-6.6 2.9-6.6 6.1 0 1.5.8 3.3 2 3.9.2.1.3 0 .3-.1s.2-.8.3-1.1c0-.1 0-.2-.1-.3-.4-.5-.7-1.4-.7-2.3 0-2.2 1.7-4.3 4.5-4.3 2.5 0 4.2 1.7 4.2 4.1 0 2.7-1.4 4.6-3.1 4.6-1 0-1.7-.8-1.5-1.8.3-1.2.8-2.5.8-3.3 0-.8-.4-1.4-1.3-1.4-1 0-1.8 1-1.8 2.4 0 .9.3 1.5.3 1.5s-1 4.2-1.2 5c-.2.9-.1 2.1 0 2.9C7.6 22.9 5 19.2 5 15 5 9.5 9.5 5 15 5s10 4.5 10 10-4.5 10-10 10z"></path>
+              <path d="M15 5C9.5 5 5 9.5 5 15c0 4.2 2.6 7.9 6.4 9.3-.1-.8-.2-2 0-2.9.2-.8 1.2-5 1.2-5s-.3-.6-.3-1.5c0-1.4.8-2.4 1.8-2.4.9 0 1.3.6 1.3 1.4 0 .9-.5 2.1-.8 3.3-.2 1 .5 1.8 1.5 1.8 1.8 0 3.1-1.9 3.1-4.6 0-2.4-1.7-4.1-4.2-4.1-2.8 0-4.5 2.1-4.5 4.3 0 .9.3 1.8.7 2.3.1.1.1.2.1.3-.1.3-.2 1-.3 1.1 0 .2-.1.2-.3.1-1.2-.6-2-2.4-2-3.9 0-3.2 2.3-6.1 6.6-6.1 3.5 0 6.2 2.5 6.2 5.8 0 3.4-2.2 6.2-5.2 6.2-1 0-2-.5-2.3-1.1 0 0-.5 1.9-.6 2.4-.2.9-.8 2-1.2 2.6.8.5 1.8.7 2.8.7 5.5 0 10-4.5 10-10S20.5 5 15 5z"></path>
+            </svg>
+          </a>
+        </li>
+      </ul>
+    </div>
+  </div>
 </div>
 {% include footer.html %}
 {% include scripts.html %}
