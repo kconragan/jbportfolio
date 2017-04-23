@@ -5,7 +5,7 @@ layout: compress
 {% include header.html %}
 {% include base.html %}
 <div id="content">
-  {% assign sorted = (site.series-list | sort: 'weight') %}
+  {% assign sorted = (site.saudade-list | sort: 'weight') %}
   {% for project in sorted %}
     {% if project.title == page.title %}
       <div class="series-masthead">

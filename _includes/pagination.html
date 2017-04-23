@@ -52,7 +52,7 @@
     prev
     {% endif %}
   </a>
-  {% assign sorted = (site.series-list | sort: 'weight') %}
+  {% assign sorted = (site.saudade-list | sort: 'weight') %}
   {% for project in sorted %}
     {% if project.slug == this_collection %}
     <a href="{{ project.link | prepend: site.baseurl }}" class="pagination-link">

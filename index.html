@@ -5,7 +5,7 @@ permalink: /
 <div class="home">
   <div class="swiper-container" id="start" data-swiper-autoplay="2000">
     <ul class="swiper-wrapper">
-      {% assign sorted = (site.series-list | sort: 'weight') %}
+      {% assign sorted = (site.saudade-list | sort: 'weight') %}
       {% for project in sorted %}
       <li class="swiper-slide" style="background-image: url({{ site.baseurl }}{{ project.preview }})">
         <a class="series-link" href="{{ site.baseurl }}{{ project.link }}">

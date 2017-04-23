@@ -35,9 +35,9 @@
           <a href="{{ site.baseurl }}">Home</a>
         </li>
         <li class="first">
-          <span class="bucket">Series</span>
+          <span class="bucket">Saudade</span>
           <ul>
-            {% assign sorted = (site.series-list | sort: 'weight') %}
+            {% assign sorted = (site.saudade-list | sort: 'weight') %}
             {% for project in sorted %}
             <li class="nav-item">
               <a href="{{ project.link | prepend: site.baseurl }}">

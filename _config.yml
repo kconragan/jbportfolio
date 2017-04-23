@@ -20,7 +20,7 @@ description: > # this means to ignore newlines until "baseurl:"
   line in _config.yml. It will appear in your document head meta (for
   Google search results) and in your feed.xml site description.
 baseurl: "/jbportfolio" # the subpath of your site, e.g. /blog
-url: "" # the base hostname & protocol for your site, e.g. http://example.com
+url: "juliebrookman.com" # the base hostname & protocol for your site, e.g. http://example.com
 twitter_username: jekyllrb
 github_username:  jekyll
 
@@ -31,13 +31,18 @@ include: ["_pages"]
 collections:
   images:
     output: false
-  saudade:
-    permalink: /series/saudade/:path/
+  ssaudade:
     output: true
-  encaustic:
-    permalink: /series/encaustic/:path/
+  water:
+    permalink: /series/saudade/water/:path/
     output: true
-  series-list:
+  abstract:
+    permalink: /series/saudade/abstract/:path/
+    output: true
+  porthole:
+    permalink: /series/saudade/porthole/:path/
+    output: true
+  saudade-list:
     output: true
 
 sass:
