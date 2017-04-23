@@ -210,7 +210,7 @@ header[role='banner'] {
 .overlay {
   position: fixed;
   z-index: 10;
-  background: #CFD5D5;
+  background: #79ADBE;
   top: 0;
   left: 0;
   width: 100%;
@@ -626,6 +626,27 @@ header[role='banner'] {
     width: 10px;
   }
 }
+
+.portrait {
+  text-align: center;
+
+  img {
+    margin: 0 auto;
+    border-radius: 50%;
+
+    max-width: 216px;
+
+    @include respond-to(xs) {
+      max-width: 264px;
+    };
+    @include respond-to(xs) {
+      max-width: 264px;
+    };
+  }
+}
+
+/* VIEMO Embed */
+.embed-container { position: relative; padding-bottom: 56.25%; height: 0; overflow: hidden; max-width: 100%; } .embed-container iframe, .embed-container object, .embed-container embed { position: absolute; top: 0; left: 0; width: 100%; height: 100%; }
 
 
 
