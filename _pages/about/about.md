@@ -15,9 +15,10 @@ Please get in touch about any of the artwork you see on this site, or if you'd l
 
 
 ## Intro
-I am a California native and graduate of San Francisco State University, where I studied Fine Art. I have explored many mediums throughout my career including photography, sculpture, glass blowing, and, most recently, encaustic painting. I have found the consistent theme in my work is working with materials that are inherently difficult to master. My work is both a purposeful act and a total relinquish of control to the process. I like to think of my work as a form of controlled chaos.
+I am a California native and graduate of San Francisco State University, where I studied Fine Art. I have explored many mediums throughout my career including photography, sculpture, glass blowing, and, most recently, encaustic painting. I have found the consistent theme in my work is working with materials that are inherently difficult to master. Fluid and malleable materials reflect a need for spontaneous expression, surrendering control to the materials and my own instinct. My work is both a purposeful act and a total relinquish of control to the process. In essence, controlled chaos.
 
-After graduating, I lived for several years in Southeast Asia, working as a scuba instructor, and my experiences living abroad were formative in the themes of my latest work. Driven by an intuitive aesthetic and need for organic expression, I use encaustic paint and found materials to capture our sense of movement and place in the changing world around us.
+After graduating, I lived for several years in Southeast Asia, working as a scuba instructor, and my experiences living abroad were formative in the themes of my latest work. Driven by an intuitive aesthetic and need for organic expression, I use encaustic paint and found materials to capture our sense of movement and place in the changing world around us. Focusing on layering, transparency, repetition, and movement, the artwork forms of its own volition, but has an intuitive aesthetic that I hope transports the viewer to their own sense of place.
+
 
 
 ## CAPRICCIO: EN NOIR ET BLANC
