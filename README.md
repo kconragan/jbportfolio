@@ -1,1 +1,2 @@
-Use 'git push live master' to publish to juliebrookman.com
+## Publishing to the live server (juliebrookman.com)
+Use 'git push live master'
