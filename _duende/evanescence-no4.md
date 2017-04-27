@@ -1,7 +1,7 @@
 ---
 layout: artwork
-weight: 02
-preview: /saudade/abstract/graphite-02.jpg
+weight: 07
+preview: /saudade/abstract/evanescence-no4.jpg
 title: Evanescence No. 4
 dimensions: 12" x 12"
 medium: Encaustic, Oil on Panel

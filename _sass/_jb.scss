@@ -237,6 +237,8 @@ header[role='banner'] {
   }
 
   .bucket {
+    display: inline-block;
+    margin-bottom: 16px;
     font-size: 12px;
     font-family: 'Fira Sans', monospace;
     text-transform: uppercase;

@@ -1,6 +1,6 @@
 ---
 layout: artwork
-weight: 02
+weight: 03
 preview: /saudade/abstract/graphite-01.jpg
 title: Duende No. 3
 dimensions: 48" x 60"
