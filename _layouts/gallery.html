@@ -19,7 +19,7 @@ layout: compress
     {% endif %}
   {% endfor %}
   <div class="posts masonry">
-    {% for project in site.[page.slug] %}
+    {% for project in site[page.slug] %}
     <div class="item">
       <a href="{{ project.url | prepend: site.baseurl }}">
         {{ project.name }}
