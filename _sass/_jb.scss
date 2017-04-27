@@ -8,6 +8,10 @@ $breakpoints: (
   'xxl': 1200px
 );
 
+$accent: #79ADBE;
+$lightaccent: #C9DCE0;
+$dark: #222;
+
 @mixin respond-to($breakpoint) {
   // Retrieves the value from the key
   $value: map-get($breakpoints, $breakpoint);
@@ -90,40 +94,48 @@ body {
 
 
 .series-masthead {
-  position: relative;
   overflow: hidden;
   text-align: center;
-  @include aspect-ratio(16, 9);
+  padding-top: 48px;
 
   @include respond-to(m) {
-    @include aspect-ratio(16, 6);
+    padding-top: 64px;
   };
 
-  > .content {
-    background-repeat: no-repeat;
-    background-position: center;
-    background-size: cover;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
+  & .series-title {
+    color: $dark;
+    font-size: 64px;
+    border: none;
+    margin: 0 auto;
+    padding: 0;
   }
 
-  & .series-title {
-    color: #fff;
-    display: inline-block;
-    margin: 0 auto;
+  .byline {
+    font-weight: bold;
+    text-transform: uppercase;
+    font-size: 12px;
+    color: $accent;
+    border-bottom: 2px solid $accent;
   }
 }
 
 .series-statement {
-  margin: 48px 0;
-  font-size: 16px;
+  margin: 24px 0;
+  font-size: 12px;
   line-height: 1.6;
   font-family: Lato, sans-serif;
-  color: #666;
+  color: $dark;
+  text-align: center;
+
+  & p {
+    margin: 0 auto;
+    max-width: 800px;
+    text-align: justify;
+  }
 
   @include respond-to(m) {
     margin: 64px;
+    font-size: 16px;
   };
 }
 
@@ -157,7 +169,7 @@ header[role='banner'] {
   }
 
   a {
-    color: black;
+    color: $dark;
     text-decoration: none;
   }
 }
@@ -242,8 +254,9 @@ header[role='banner'] {
     font-size: 12px;
     font-family: 'Fira Sans', monospace;
     text-transform: uppercase;
-    border-bottom: 1px solid #222;
-    color: #222;
+    font-weight: bold;
+    border-bottom: 2px solid #222;
+    color: $dark;
     @include respond-to(l) {
       font-size: 16px;
     };
@@ -289,7 +302,7 @@ header[role='banner'] {
 
       a {
         position: relative;
-        color: #EBE8E1;
+        color: $lightaccent;
         text-decoration: none;
         overflow: hidden;
 
@@ -578,7 +591,7 @@ header[role='banner'] {
 
 .btn-inquire {
   display: inline-block;
-  background-color: #222;
+  background-color: $dark;
   font-family: 'Fira Sans', monospace;
   font-size: 16px;
   line-height: 48px;
@@ -595,7 +608,7 @@ header[role='banner'] {
   margin-bottom: 16px;
   font-family: 'Fira Sans', monospace;
   font-size: 12px;
-  color: #222;
+  color: $dark;
   border-top: 1px solid #eee;
   border-bottom: 1px solid #eee;
 }
@@ -604,7 +617,7 @@ header[role='banner'] {
   display: inline-block;
   min-width: 40px;
   text-decoration: none;
-  color: #222;
+  color: $dark;
 
   &.prev svg {
     -webkit-transform: rotate(90deg);
