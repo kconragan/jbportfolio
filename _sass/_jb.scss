@@ -643,26 +643,148 @@ header[role='banner'] {
   }
 }
 
+.about {
+  .series-title {
+    margin: 48px 16px 16px 0;
+  }
+
+  .section {
+    @include respond-to(m) {
+      margin-left: 224px;
+      margin-right: 72px;
+    };
+
+    .section-title {
+      font-weight: normal;
+      color: $accent;
+    }
+  }
+
+  .fullbleed {
+    margin: 0;
+    padding: 16px 24px;
+
+    a {
+      color: $accent;
+      text-decoration: none;
+    }
+
+    .section-title {
+      margin-top: 0;
+
+      @include respond-to(m) {
+        margin-left: 248px;
+      };
+    }
+  }
+
+  .pullquote {
+    display: block;
+    font-family: 'Cormorant', sans-serif;
+    font-size: 24px;
+    margin-top: 16px;
+    margin-bottom: 16px;
+
+    @include respond-to(m) {
+      margin-left: -224px;
+    };
+  }
+
+  .video {
+    background-color: $dark;
+    color: #fff;
+    margin: auto -24px;
+
+    @include respond-to(m) {
+      margin: auto -48px;
+    };
+
+    .wrapper {
+      position: relative;
+      p {
+        @include respond-to(m) {
+          position: absolute;
+          max-width: 208px;
+          text-align: right;
+          font-size: 12px;
+          top: 48px;
+          left: 16px;
+        };
+      }
+    }
+  }
+
+  p {
+    font-size: 14px;
+    line-height: 1.6;
+    font-family: 'Fira Sans', sans-serif;
+
+    @include respond-to(m) {
+      font-size: 16px;
+    }
+  }
+}
+
 .portrait {
   text-align: center;
+  margin: 0 auto;
+  width: 164px;
+
+  @include respond-to(m) {
+    width: 224px;
+  };
+
+  .foo {
+    display: block;
+    position: absolute;
+
+    top: 152px;
+    left: 192px;
+    height: 124px;
+    border: 1px solid $accent;
+    width: 124px;
+
+    @include respond-to(m) {
+      top: 112px;
+      left: 152px;
+      height: 148px;
+      width: 148px;
+    };
+
+    .box {
+      position: absolute;
+      bottom: 16px;
+      right: 16px;
+    }
+  }
 
   img {
     margin: 0 auto;
-    border-radius: 50%;
-
-    max-width: 216px;
-
-    @include respond-to(xs) {
-      max-width: 264px;
-    };
-    @include respond-to(xs) {
-      max-width: 264px;
-    };
   }
 }
 
 /* VIEMO Embed */
-.embed-container { position: relative; padding-bottom: 56.25%; height: 0; overflow: hidden; max-width: 100%; } .embed-container iframe, .embed-container object, .embed-container embed { position: absolute; top: 0; left: 0; width: 100%; height: 100%; }
+.embed-container {
+  position: relative;
+  padding-bottom: 56.25%;
+  height: 0;
+  overflow: hidden;
+  max-width: 1070px;
+
+  @include respond-to(m) {
+    margin-left: 244px;
+    margin-right: 64px;
+    padding-bottom: 39.25%;
+  };
+}
+.embed-container iframe, .embed-container object, .embed-container embed {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width:
+  100%;
+  height: 100%;
+}
 
 
 
