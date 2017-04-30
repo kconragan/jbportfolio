@@ -1,8 +1,8 @@
 ---
 weight: 01
-layout: default
 name: Water
 slug: water
+pagetitle: Encaustic Paintings | Saudade Water
 preview: /assets/images/saudade/water/preview.jpg
 link: /series/saudade/water/
 ---
