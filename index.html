@@ -4,18 +4,20 @@ permalink: /
 ---
 <div class="home">
   <div class="swiper-container" id="start" data-swiper-autoplay="2000">
-    <ul class="swiper-wrapper">
+    <div class="swiper-wrapper">
       {% assign sorted = (site.saudade-list | sort: 'weight') %}
       {% for project in sorted %}
-      <li class="swiper-slide" style="background-image: url({{ site.baseurl }}{{ project.preview }})">
-        <a class="series-link" href="{{ site.baseurl }}{{ project.link }}">
-          <span class="series">SERIES</span>
-          <h2 class="series-title">{{ project.name }}</h2>
-          <i class="icono-arrow2-left"></i>
-        </a>
-      </li>
+      <a href="{{ site.baseurl }}{{ project.link }}" class="swiper-slide" style="background-image: url({{ site.baseurl }}{{ project.preview }})">
+        <span class="series-link" >
+          <div>
+            <span class="series">ENCAUSTIC</span>
+            <h2 class="series-title">{{ project.name }}</h2>
+            <i class="icono-arrow2-left"></i>
+          </div>
+        </span>
+      </a>
       {% endfor %}
-    </ul>
+    </div>
     <!-- Add Pagination -->
     <div class="swiper-pagination"></div>
   </div>
