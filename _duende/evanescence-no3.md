@@ -1,6 +1,6 @@
 ---
 layout: artwork
-weight: 06
+weight: 02
 preview: /saudade/abstract/evanescence-no3.jpg
 title: Evanescence No. 3
 pagetitle: Encaustic Painting | Evanescence No. 3

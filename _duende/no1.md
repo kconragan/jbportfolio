@@ -1,6 +1,6 @@
 ---
 layout: artwork
-weight: 01
+weight: 05
 preview: /saudade/abstract/untitled-01.jpg
 title: Duende No. 1
 pagetitle: Encaustic Painting | Duende No. 1

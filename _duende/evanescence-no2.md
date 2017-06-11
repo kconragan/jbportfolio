@@ -1,6 +1,6 @@
 ---
 layout: artwork
-weight: 05
+weight: 01
 preview: /saudade/abstract/evanescence-no2.jpg
 title: Evanescence No. 2
 pagetitle: Encaustic Painting | Evanescence No. 2

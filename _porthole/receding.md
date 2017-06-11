@@ -6,4 +6,5 @@ title: Receding
 pagetitle: Encaustic Painting | Receding
 dimensions: 9" x 9"
 medium: Encaustic on Panel
+sold: true
 ---

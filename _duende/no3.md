@@ -1,6 +1,6 @@
 ---
 layout: artwork
-weight: 03
+weight: 07
 preview: /saudade/abstract/graphite-01.jpg
 title: Duende No. 3
 pagetitle: Encaustic Painting | Duende No. 3

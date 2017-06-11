@@ -25,8 +25,11 @@ layout: compress
           <li>{{ page.dimensions }}</li>
           <li></li>
         </ul>
-        <a href="mailto:hi@juliebrookman.com?Subject=Painting Inquiry: {{ page.title }}&body={{site.url}}{{site.baseurl}}{{page.url}}%0D%0A%0D%0A" class="btn-inquire">Inquire</a>
-        <!-- {{site.url}}{{page.url}} -->
+        {% if page.sold == true %}
+        <span class="btn sold">Sold</span>
+        {% else %}
+        <a class="btn inquire" href="mailto:hi@juliebrookman.com?Subject=Painting Inquiry: {{ page.title }}&body={{site.url}}{{site.baseurl}}{{page.url}}%0D%0A%0D%0A">Inquire</a>
+        {% endif %}
       </div>
     </div>
   </article>

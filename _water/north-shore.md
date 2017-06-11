@@ -6,4 +6,5 @@ title: Saudade; North Shore
 pagetitle: Encaustic Painting | North Shore
 dimensions: 14" x 6"
 medium: Encaustic, Oil on Plywood
+sold: true
 ---
