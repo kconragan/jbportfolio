@@ -6,4 +6,5 @@ title: Rift
 pagetitle: Encaustic Painting | Rift
 dimensions: 30" x 40"
 medium: Encaustic, Oil on Panel
+sold: true
 ---
