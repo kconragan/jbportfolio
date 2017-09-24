@@ -13,31 +13,34 @@
 # you will see them accessed via {{ site.title }}, {{ site.email }}, and so on.
 # You can create any custom variable you would like, and they will be accessible
 # in the templates via {{ site.myvariable }}.
-title: Julie Brookman
-email: your-email@domain.com
+title: Julie Brookman Artwork
+email: julie@juliebrookman.com
 description: > # this means to ignore newlines until "baseurl:"
-  Write an awesome description for your new site here. You can edit this
-  line in _config.yml. It will appear in your document head meta (for
-  Google search results) and in your feed.xml site description.
-baseurl: "/jbportfolio" # the subpath of your site, e.g. /blog
-url: "" # the base hostname & protocol for your site, e.g. http://example.com
-twitter_username: jekyllrb
-github_username:  jekyll
+  Julie Brookman is a California artist, using encaustic paint and found
+  materials to create an organic aesthetic that transports the viewer to their
+  own sense of place.
+baseurl: "" # the subpath of your site, e.g. /blog
+url: "juliebrookman.com" # the base hostname & protocol for your site, e.g. http://example.com
 
 image_dir: /assets/images
 
-include: ["_pages"]
+include: ["_pages", ".htaccess"]
 
 collections:
   images:
     output: false
-  saudade:
-    permalink: /series/saudade/:path/
+  ssaudade:
     output: true
-  encaustic:
-    permalink: /series/encaustic/:path/
+  water:
+    permalink: /series/saudade/water/:path/
     output: true
-  series-list:
+  duende:
+    permalink: /series/saudade/duende/:path/
+    output: true
+  porthole:
+    permalink: /series/saudade/porthole/:path/
+    output: true
+  saudade-list:
     output: true
 
 sass:

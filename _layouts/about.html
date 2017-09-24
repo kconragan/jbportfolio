@@ -1,0 +1,19 @@
+---
+layout: compress
+---
+{% include head.html %}
+{% include header.html %}
+{% include base.html %}
+<div id="content" class="no-js">
+  {{ content }}
+</div>
+{% include footer.html %}
+{% include scripts.html %}
+<script>
+$(function() {
+  var $pullquote = $('.pullquote');
+  var $parentParagraph = $(this).parent('p');
+  $pullquote.clone().addClass('pulledquote').appendTo($parentParagraph);
+});
+</script>
+{% include foot.html %}

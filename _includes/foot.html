@@ -6,6 +6,15 @@
         $(this).text(text == "NAVIGATE" ? "CLOSE" : "NAVIGATE");
        $('#overlay').toggleClass('open');
       });
+
+      $('#content').removeClass('no-js').addClass('js fade-in');
+
+      WebFont.load({
+        google: {
+          families: ['Cormorant Infant', 'Fira Sans']
+        },
+        timeout: 3000
+      });
     </script>
   </body>
 </html>

@@ -28,35 +28,38 @@
       </ul>
     </nav>
   </div>
-</header>
-<div class="overlay" id="overlay">
-  <nav class="overlay-menu">
-    <ul>
-      <li class="nav-item">
-        <a href="{{ site.baseurl }}">Home</a>
-      </li>
-      <li>
-        <span class="bucket">Series</span>
-        <ul>
-          {% assign sorted = (site.series-list | sort: 'weight') %}
-          {% for project in sorted %}
+  <div class="overlay" id="overlay">
+    <nav class="overlay-menu">
+      <ul>
+        <li class="nav-item first">
+          <a href="/">Home</a>
+        </li>
+        <li class="first">
+          <span class="bucket">Saudade</span>
+          <ul>
+            {% assign sorted = (site.saudade-list | sort: 'weight') %}
+            {% for project in sorted %}
             <li class="nav-item">
               <a href="{{ project.link | prepend: site.baseurl }}">
                 {{ project.name }}
               </a>
             </li>
-          {% endfor %}
-        </ul>
-      </li>
-      <li>
-        <span class="bucket">Projects</span>
-        <ul>
-          <li class="nav-item"><a href="#">Memorial</a></li>
-        </ul>
-      </li>
-      <li class="nav-item">
-        <a href="#">Contact</a>
-      </li>
-    </ul>
-  </nav>
-</div>
+            {% endfor %}
+          </ul>
+        </li>
+        <!-- <li class="first">
+          <span class="bucket">Projects</span>
+          <ul>
+            <li class="nav-item"><a href="#">Memorial</a></li>
+          </ul>
+        </li> -->
+        <li class="nav-item first">
+          <span class="bucket">About</span>
+          <ul>
+            <li class="nav-item"><a href="{{ site.baseurl }}/about/">Bio &amp; Contact</a></li>
+          </ul>
+        </li>
+      </ul>
+    </nav>
+  </div>
+</header>
